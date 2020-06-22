@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+:root {
+  /* ## Colors
+  ### Primary */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+  --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+  --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+  
+  /* ### Neutral */
+  --DarkText: hsl(229, 25%, 31%);
+  --ScoreText: hsl(229, 64%, 46%);
+  --HeaderOutline: hsl(217, 16%, 45%);
+  
+  /* ### Background */
+  --RadiaGradient1: hsl(214, 47%, 23%);
+  --RadiaGradient2: hsl(237, 49%, 15%);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  /* ## Fonts */
+  --Fonts: 'Barlow Semi Condensed', sans-serif;
 }
