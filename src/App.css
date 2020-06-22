@@ -5,7 +5,8 @@
   ### Primary */
 
   --ScissorsGradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-  --PaperGradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --PaperGradient1: hsl(230, 89%, 62%);
+  --PaperGradient2: hsl(230, 89%, 65%);
   --RockGradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
   --LizardGradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
   --Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
@@ -21,4 +22,8 @@
 
   /* ## Fonts */
   --Fonts: 'Barlow Semi Condensed', sans-serif;
+}
+
+body{
+  font-family: var(--Fonts);
 }
