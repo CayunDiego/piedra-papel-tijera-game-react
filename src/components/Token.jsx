@@ -13,6 +13,7 @@ const TokenStyled = styled.div`
   box-shadow: 0 5px 0 ${({color}) => color.border};
   background: white;
   cursor: pointer;
+  z-index: 2;
   &:active{
       transform: scale(.9)
   }

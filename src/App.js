@@ -4,6 +4,7 @@ import Header from './components/Header';
 import styled from 'styled-components';
 import Wrapper from './components/Wrapper';
 import Game from './components/Game';
+import Rules from './components/Rules';
 
 const AppStyled = styled.main`
   background-image: radial-gradient(circle at top, var(--RadiaGradient1) 30%, var(--RadiaGradient2) 100% );
@@ -26,7 +27,7 @@ function App() {
          <div className='app-content'>
             <Header/>
             <Game/>
-            <span>Rules</span>
+            <Rules/>
          </div>
       </Wrapper>
     </AppStyled>

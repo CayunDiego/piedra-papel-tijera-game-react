@@ -7,10 +7,16 @@ const GameStyled = styled.div`
   grid-template-columns: 130px 130px;
   justify-content: center;
   justify-items: center;
-  grid-gap: 50px;
+  grid-gap: 30px 50px;
   margin: 2em 0;
+  position: relative;
   & div:nth-of-type(3) {
     grid-column: span 2;
+  }
+  .triangle{
+    position: absolute;
+    width: 202px;
+    top: 60px;
   }
 `;
 
@@ -20,6 +26,7 @@ const Game = () => {
             <Token name='paper'/>
             <Token name='scissors'/>
             <Token name='rock'/>
+            <img src="./assets/images/bg-triangle.svg" alt="" className='triangle'/>
         </GameStyled>
     )
 }
