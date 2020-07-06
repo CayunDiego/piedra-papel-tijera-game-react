@@ -9,17 +9,24 @@ const ButtonStyled = styled.div`
     padding: .7em;
     box-sizing: border-box;
     justify-content: center;
+    text-align: center;
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2.5px;
 `;
 
-const Button = ({...props}) => {
+const Button = ({children,...props}) => {
     return (
         <ButtonStyled {...props}>
-            Rules
+            {children}
         </ButtonStyled>
     )
 }
+
+export const WhiteButton = styled(ButtonStyled)`
+    background: white;
+    color: #101a3f;
+    min-width:220px; 
+`;
 
 export default Button;

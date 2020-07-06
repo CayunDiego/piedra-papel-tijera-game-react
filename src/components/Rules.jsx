@@ -46,7 +46,9 @@ const Rules = () => {
                     </div>
                 )
             }
-            <Button onClick={handleToggleClick}/>
+            <Button onClick={handleToggleClick}>
+                Rules
+            </Button>
         </RulesSyled>
     )
 }
