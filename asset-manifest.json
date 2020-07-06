@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/piedra-papel-tijera-game-react/static/css/main.2be837b8.chunk.css",
-    "main.js": "/piedra-papel-tijera-game-react/static/js/main.16f59c0d.chunk.js",
-    "main.js.map": "/piedra-papel-tijera-game-react/static/js/main.16f59c0d.chunk.js.map",
+    "main.js": "/piedra-papel-tijera-game-react/static/js/main.add7d987.chunk.js",
+    "main.js.map": "/piedra-papel-tijera-game-react/static/js/main.add7d987.chunk.js.map",
     "runtime-main.js": "/piedra-papel-tijera-game-react/static/js/runtime-main.203ea9a2.js",
     "runtime-main.js.map": "/piedra-papel-tijera-game-react/static/js/runtime-main.203ea9a2.js.map",
-    "static/js/2.dac6e1f9.chunk.js": "/piedra-papel-tijera-game-react/static/js/2.dac6e1f9.chunk.js",
-    "static/js/2.dac6e1f9.chunk.js.map": "/piedra-papel-tijera-game-react/static/js/2.dac6e1f9.chunk.js.map",
+    "static/js/2.6c4f67cf.chunk.js": "/piedra-papel-tijera-game-react/static/js/2.6c4f67cf.chunk.js",
+    "static/js/2.6c4f67cf.chunk.js.map": "/piedra-papel-tijera-game-react/static/js/2.6c4f67cf.chunk.js.map",
     "index.html": "/piedra-papel-tijera-game-react/index.html",
-    "precache-manifest.50e14479d54b4a79a09b25358981ba2b.js": "/piedra-papel-tijera-game-react/precache-manifest.50e14479d54b4a79a09b25358981ba2b.js",
+    "precache-manifest.6bc2047a17eb906fef9aed12fa0b905b.js": "/piedra-papel-tijera-game-react/precache-manifest.6bc2047a17eb906fef9aed12fa0b905b.js",
     "service-worker.js": "/piedra-papel-tijera-game-react/service-worker.js",
     "static/css/main.2be837b8.chunk.css.map": "/piedra-papel-tijera-game-react/static/css/main.2be837b8.chunk.css.map",
-    "static/js/2.dac6e1f9.chunk.js.LICENSE.txt": "/piedra-papel-tijera-game-react/static/js/2.dac6e1f9.chunk.js.LICENSE.txt"
+    "static/js/2.6c4f67cf.chunk.js.LICENSE.txt": "/piedra-papel-tijera-game-react/static/js/2.6c4f67cf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.203ea9a2.js",
-    "static/js/2.dac6e1f9.chunk.js",
+    "static/js/2.6c4f67cf.chunk.js",
     "static/css/main.2be837b8.chunk.css",
-    "static/js/main.16f59c0d.chunk.js"
+    "static/js/main.add7d987.chunk.js"
   ]
 }
