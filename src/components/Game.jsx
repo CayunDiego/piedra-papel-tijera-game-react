@@ -32,6 +32,9 @@ const GameStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    h2{
+      text-transform: uppercase;
+    }
   }
 `;
 
@@ -41,6 +44,7 @@ const Game = () => {
   const [playing, setPlaying] = useState(false);
   const [pick, setPick] = useState('');
   const [housePick, setHousePick] = useState('default');
+  const [results, setResults] = useState('');
   // const [score, setScore] = useState(0);
 
   const getRandomInt = (min, max) => {
@@ -48,21 +52,26 @@ const Game = () => {
   }
 
   const louchHousePick = () => {
-    setInterval(()=>{
-      const pick = elements[getRandomInt(0,3)];
-      setHousePick(pick);
-    },50);
-    // return elements[getRandomInt(0,3)];
+    return new Promise((resolve, ) => {
+      let pick;
+      const interval = setInterval(()=>{
+        pick = elements[getRandomInt(0,3)];
+        setHousePick(pick);
+      },75);
+      setTimeout(() => {
+        clearInterval(interval);
+        resolve(pick);
+      },2000);
+    });
   }
 
-  const onClick = name => {
+  const onClick = async name => {
     setPlaying(true);
     setPick(name);
-    // const housePick = 
-    louchHousePick();
-    // console.log('La casa eligió: ', housePick);
-    // const result = playGame(name, housePick);
-    // console.log(result);
+    const house = await louchHousePick();
+    // console.log('La casa eligió: ', house);
+    const result = playGame(name, house);
+    setResults(result);
   }
 
   const handleTryAgainClick = () => {
@@ -121,7 +130,7 @@ const Game = () => {
                         <p>The house Picked</p>
                       </div>
                       <div className="results">
-                        <h2>You???</h2>
+                      <h2>You {results}</h2>
                         <WhiteButton onClick={handleTryAgainClick}>
                           Play again
                         </WhiteButton>
