@@ -48,11 +48,13 @@ const colors = {
     }
 }
 
-const Token = ({name = 'default', onClick}) => {
+const Token = ({name = 'default', onClick }) => {
     const image = `./assets/images/icon-${name}.svg`;
 
     const handleClick = () => {
-        onClick(name);
+        if(onClick){
+            onClick(name);
+        }
     }
 
     const color = colors[name];

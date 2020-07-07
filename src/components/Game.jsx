@@ -70,7 +70,6 @@ const Game = () => {
     setPlaying(true);
     setPick(name);
     const house = await louchHousePick();
-    // console.log('La casa eligió: ', house);
     const result = playGame(name, house);
     setResults(result);
     if(result === 'win'){
