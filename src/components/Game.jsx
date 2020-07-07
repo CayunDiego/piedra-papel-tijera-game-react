@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import Token from './Token';
 import { WhiteButton } from './Button';
+import { ScoreContext } from '../context/ScoreContetx';
 
 const GameStyled = styled.div`
   display: grid;
@@ -45,7 +46,7 @@ const Game = () => {
   const [pick, setPick] = useState('');
   const [housePick, setHousePick] = useState('default');
   const [results, setResults] = useState('');
-  // const [score, setScore] = useState(0);
+  const { setScore } = useContext(ScoreContext);
 
   const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
@@ -72,6 +73,9 @@ const Game = () => {
     // console.log('La casa eligió: ', house);
     const result = playGame(name, house);
     setResults(result);
+    if(result === 'win'){
+      setScore(prev => prev + 1);
+    }
   }
 
   const handleTryAgainClick = () => {

@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Wrapper from './components/Wrapper';
 import Game from './components/Game';
 import Rules from './components/Rules';
+import ScoreContetx from './context/ScoreContetx';
+
 
 const AppStyled = styled.main`
   background-image: radial-gradient(circle at top, var(--RadiaGradient1) 30%, var(--RadiaGradient2) 100% );
@@ -22,15 +24,17 @@ const AppStyled = styled.main`
 
 function App() {
   return (
-    <AppStyled>
-      <Wrapper>
-         <div className='app-content'>
-            <Header/>
-            <Game/>
-            <Rules/>
-         </div>
-      </Wrapper>
-    </AppStyled>
+    <ScoreContetx>
+      <AppStyled>
+        <Wrapper>
+          <div className='app-content'>
+              <Header/>
+              <Game/>
+              <Rules/>
+          </div>
+        </Wrapper>
+      </AppStyled>
+    </ScoreContetx>
   );
 }
 
