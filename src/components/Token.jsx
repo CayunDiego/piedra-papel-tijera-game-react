@@ -1,5 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const shadow = keyframes`
+    /* from {
+        box-shadow: 0 0 0 0px rgba(255,255,255,.03), 0 0 0 0px rgba(255,255,255,.02), 0 0 0 0px rgba(255,255,255,.02)
+    } */
+    to {
+        box-shadow: 0 0 0 20px rgba(255,255,255,.03), 0 0 0 40px rgba(255,255,255,.02), 0 0 0 60px rgba(255,255,255,.02);
+        transform: rotateZ(360deg) scale(1.1);
+    }
+`;
+
 
 const TokenStyled = styled.div`
   width: 130px;
@@ -11,9 +22,10 @@ const TokenStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 5px 0 ${({color}) => color.border};
   cursor: pointer;
   z-index: 2;
+  animation: 1s ${({isShadowAnimated}) => isShadowAnimated ? shadow : ''} forwards;
+  box-shadow: 0 5px 0 ${({color}) => color.border};
   &:active{
       transform: scale(.9)
   }
@@ -48,7 +60,7 @@ const colors = {
     }
 }
 
-const Token = ({name = 'default', onClick }) => {
+const Token = ({name = 'default', onClick, isShadowAnimated = false}) => {
     const image = `./assets/images/icon-${name}.svg`;
 
     const handleClick = () => {
@@ -60,7 +72,7 @@ const Token = ({name = 'default', onClick }) => {
     const color = colors[name];
 
     return (
-        <TokenStyled color={color} onClick={handleClick} name={name}>
+        <TokenStyled color={color} onClick={handleClick} name={name} isShadowAnimated={isShadowAnimated}>
             <div className="fill">
                 <img src={image} alt=""/>
             </div>

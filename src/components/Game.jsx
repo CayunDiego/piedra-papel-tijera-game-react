@@ -35,6 +35,8 @@ const GameStyled = styled.div`
     align-items: center;
     h2{
       text-transform: uppercase;
+      font-size: 3.5em;
+      margin: 1rem;
     }
   }
 `;
@@ -47,6 +49,7 @@ const Game = () => {
   const [housePick, setHousePick] = useState('default');
   const [results, setResults] = useState('');
   const { setScore } = useContext(ScoreContext);
+
 
   const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min)
@@ -79,6 +82,7 @@ const Game = () => {
 
   const handleTryAgainClick = () => {
     setPlaying(false);
+    setResults('');
   }
 
   const playGame = (pick, housePick) => {
@@ -125,18 +129,24 @@ const Game = () => {
                   : (
                     <>
                       <div className='in-game'>
-                        <Token name={pick}/>
+                        <Token name={pick} isShadowAnimated={(results==='win')}/>
                         <p>You Picked</p>
                       </div>
                       <div className='in-game'>
-                        <Token name={housePick}/>
+                        <Token name={housePick} isShadowAnimated={(results==='lose')}/>
                         <p>The house Picked</p>
                       </div>
                       <div className="results">
-                      <h2>You {results}</h2>
-                        <WhiteButton onClick={handleTryAgainClick}>
-                          Play again
-                        </WhiteButton>
+                        {
+                          results && (
+                            <>
+                              <h2>You {results}</h2>
+                              <WhiteButton onClick={handleTryAgainClick}>
+                                Play again
+                              </WhiteButton>
+                            </>
+                          )
+                        }
                       </div>
                     </>
                   )
