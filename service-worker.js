@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/piedra-papel-tijera-game-react/precache-manifest.75b0291a020c99590295fb76d31b26dd.js"
+  "/piedra-papel-tijera-game-react/precache-manifest.eb17921aa9b1cb00d10d21b00f32e4f7.js"
 );
 
 self.addEventListener('message', (event) => {
