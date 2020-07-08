@@ -39,6 +39,14 @@ const GameStyled = styled.div`
       margin: 1rem;
     }
   }
+  @media screen and (min-width: 768px){
+    grid-gap: 40px 150px;
+    .triangle{
+      position: absolute;
+      width: 300px;
+      top: 85px;
+    }
+  } 
 `;
 
 const elements = ['paper', 'scissors', 'rock'];

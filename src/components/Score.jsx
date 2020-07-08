@@ -22,6 +22,15 @@ const ScoreStyled = styled.div`
         font-size: 40px;
         margin: 0;
     }
+    @media screen and (min-width: 768px){
+    padding: 10px 15px;
+    small{
+        font-size: 16px;
+    }
+    p{
+      font-size: 50px;
+    }
+  } 
 `;
 
 const Score = () => {

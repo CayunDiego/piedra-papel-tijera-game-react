@@ -24,6 +24,13 @@ const RulesSyled = styled.div`
         font-weight: 700;
         margin: 0;
     }
+    @media screen and (min-width: 1024px){
+      .button{
+          position: fixed;
+          right: 2em;
+          bottom: 2em;
+      }
+    } 
 `;
 
 const Rules = () => {
@@ -46,7 +53,7 @@ const Rules = () => {
                     </div>
                 )
             }
-            <Button onClick={handleToggleClick}>
+            <Button onClick={handleToggleClick} className="button">
                 Rules
             </Button>
         </RulesSyled>

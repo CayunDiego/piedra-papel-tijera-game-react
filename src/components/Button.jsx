@@ -13,6 +13,10 @@ const ButtonStyled = styled.div`
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2.5px;
+    :hover {
+        background: white;
+        color: #101a3f;
+    }
 `;
 
 const Button = ({children,...props}) => {
