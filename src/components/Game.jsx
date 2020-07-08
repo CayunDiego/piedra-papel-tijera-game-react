@@ -41,10 +41,35 @@ const GameStyled = styled.div`
   }
   @media screen and (min-width: 768px){
     grid-gap: 40px 150px;
+    grid-template-columns: 200px 200px;
+    ${({ playing }) => playing && 'grid-gap: 40px 120px;'}
+    ${({ playing, results}) => (playing && results) && 'grid-template-columns: 100px 75px 75px 100px;'}
+    & div:nth-of-type(3) {
+      ${({ playing, results}) => (playing && results) && 'grid-column: 2 / 4; grid-row: 1;'}
+    }
+    .results{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     .triangle{
       position: absolute;
       width: 300px;
       top: 85px;
+    }
+    .in-game{
+      display: flex;
+      flex-direction: column;
+      >div{
+        order: 2;
+      }
+      >p{
+        font-size: 1.2em;
+        order: 1;
+        margin-bottom: 2em;
+      }
     }
   } 
 `;
@@ -124,7 +149,7 @@ const Game = () => {
   }
 
   return (
-      <GameStyled>
+      <GameStyled playing={playing} results={(results !== '')}>
         {
           !playing ? (
                       <>

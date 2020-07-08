@@ -42,7 +42,8 @@ const TokenStyled = styled.div`
     justify-content: center;
     align-items: center;
     img{
-        animation: 1s ${({isShadowAnimated}) => isShadowAnimated ? box : ''} forwards;;
+        width: 40%;
+        animation: 1s ${({isShadowAnimated}) => isShadowAnimated ? box : ''} forwards;
     }
   }
   @media screen and (min-width: 768px){

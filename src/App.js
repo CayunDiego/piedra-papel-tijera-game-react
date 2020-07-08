@@ -12,7 +12,6 @@ const AppStyled = styled.main`
   background-image: radial-gradient(circle at top, var(--RadiaGradient1) 30%, var(--RadiaGradient2) 100% );
   color: white;
   .app-content{
-    border: 1px solid red;
     min-height: 100vh;
     padding: 2em;
     box-sizing: border-box;
