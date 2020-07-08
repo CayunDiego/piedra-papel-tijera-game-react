@@ -2,12 +2,15 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const shadow = keyframes`
-    /* from {
-        box-shadow: 0 0 0 0px rgba(255,255,255,.03), 0 0 0 0px rgba(255,255,255,.02), 0 0 0 0px rgba(255,255,255,.02)
-    } */
     to {
         box-shadow: 0 0 0 20px rgba(255,255,255,.03), 0 0 0 40px rgba(255,255,255,.02), 0 0 0 60px rgba(255,255,255,.02);
         transform: rotateZ(360deg) scale(1.1);
+    }
+`;
+
+const box = keyframes`
+    to {
+        transform: rotateY(360deg);
     }
 `;
 
@@ -29,7 +32,7 @@ const TokenStyled = styled.div`
   &:active{
       transform: scale(.9)
   }
-  .fill{
+  .box{
     background: ${({name}) => name === 'default' ? '#122343' : 'white'};
     box-shadow: 0 -4px 0 ${({name}) => name === 'default' ? 'transparent' : '#babfd4'};
     flex: 1;
@@ -38,6 +41,9 @@ const TokenStyled = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    img{
+        animation: 1s ${({isShadowAnimated}) => isShadowAnimated ? box : ''} forwards;;
+    }
   }
   @media screen and (min-width: 768px){
       width: 200px;
@@ -77,7 +83,7 @@ const Token = ({name = 'default', onClick, isShadowAnimated = false}) => {
 
     return (
         <TokenStyled color={color} onClick={handleClick} name={name} isShadowAnimated={isShadowAnimated}>
-            <div className="fill">
+            <div className="box">
                 <img src={image} alt=""/>
             </div>
         </TokenStyled>
