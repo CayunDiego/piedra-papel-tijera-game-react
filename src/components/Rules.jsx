@@ -17,12 +17,13 @@ const RulesSyled = styled.div`
         align-items: center;
         justify-content: space-between;
         padding: 2em;
-    }
-    h2{
-        color: #3B4262;
-        text-transform: uppercase;
-        font-weight: 700;
-        margin: 0;
+        h2{
+            color: #3B4262;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0;
+            margin-bottom: 1em;
+        }
     }
     @media screen and (min-width: 1024px){
       .button{
@@ -30,6 +31,24 @@ const RulesSyled = styled.div`
           right: 2em;
           bottom: 2em;
       }
+      .rules-overlay{
+          width: 400px;
+          margin: auto;
+          top: 0;
+          bottom: initial;
+          transform: translateY(50%);
+          border-radius: 8px;
+          h2{
+            align-self: flex-start;
+            font-size: 32px;
+          }
+      }
+      .close-button{
+          position: absolute;
+          right: 2em;
+          top: 2.5em;
+      }
+      
     } 
 `;
 
